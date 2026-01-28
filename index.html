@@ -71,22 +71,7 @@
     .btn-outline{border:1px solid var(--primary)}
     .btn-outline:hover{background:var(--primary);color:#020617}
 
-    /* METRICS */
-    .metrics{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-      gap:25px;
-    }
-    .metric{
-      background:var(--card);
-      padding:30px;
-      border-radius:20px;
-      text-align:center;
-      border:1px solid rgba(255,255,255,.08);
-    }
-    .metric h3{font-size:2.2rem;color:var(--primary)}
-
-    /* SKILLS */
+    /* GRID CARDS */
     .skills-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -116,6 +101,7 @@
     }
     .project:hover{transform:translateY(-10px)}
 
+    .carousel{position:relative}
     .carousel img{
       width:100%;
       aspect-ratio:16/9;
@@ -173,39 +159,63 @@
   </div>
 </header>
 
+<!-- WHAT I DO -->
 <section>
-  <h2>Impact Metrics</h2>
-  <div class="metrics">
-    <div class="metric"><h3>5K+</h3><p>Rows of Data Analyzed</p></div>
-    <div class="metric"><h3>8+</h3><p>Dashboards & Reports Built</p></div>
-    <div class="metric"><h3>15+</h3><p>SQL Queries Written</p></div>
-    <div class="metric"><h3>4</h3><p>Academic & Personal Projects</p></div>
+  <h2>What I Do</h2>
+  <div class="skills-grid">
+    <div class="skill">
+      <strong>Understand the Problem</strong><br>
+      Translate business questions into clear analytical objectives.
+    </div>
+    <div class="skill">
+      <strong>Work with Data</strong><br>
+      Clean, transform, and prepare data using SQL and Excel.
+    </div>
+    <div class="skill">
+      <strong>Analyze & Explore</strong><br>
+      Identify trends and patterns through structured analysis.
+    </div>
+    <div class="skill">
+      <strong>Build Dashboards</strong><br>
+      Create clear and interactive dashboards in Power BI and Excel.
+    </div>
+    <div class="skill">
+      <strong>Generate Insights</strong><br>
+      Focus on insights that support data-driven decisions.
+    </div>
+    <div class="skill">
+      <strong>Improve Continuously</strong><br>
+      Learn from feedback and refine analysis techniques.
+    </div>
   </div>
 </section>
 
+<!-- CORE SKILLS -->
 <section>
   <h2>Core Skills</h2>
   <div class="skills-grid">
     <div class="skill">SQL · Joins · CTEs · Subqueries · Window Functions</div>
     <div class="skill">Power BI · Dashboard Creation · DAX Basics</div>
-    <div class="skill">Data Cleaning · Transformation · Validation</div>
     <div class="skill">Excel · Pivot Tables · Lookups · Charts</div>
+    <div class="skill">Data Cleaning · Transformation · Validation</div>
     <div class="skill">Business Analysis · KPI Tracking · Trend Analysis</div>
-    <div class="skill">Data Visualization · Insight Generation</div>
+    <div class="skill">Data Visualization · Insight Communication</div>
   </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
   <h2>Projects</h2>
   <div class="projects-grid" id="github-projects"></div>
 </section>
 
+<!-- CONTACT -->
 <section>
   <h2>Contact</h2>
   <div class="contact-box">
-    <p><strong>Email:</strong> devup2701@gmail.com</p>
+    <p><strong>Email:</strong> devendrapatil0602@gmail.com</p>
     <p><strong>GitHub:</strong> <a href="https://github.com/Devendra0602" target="_blank">github.com/Devendra0602</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/patil-devendra2701/" target="_blank">linkedin.com/in/patil-devendra2701</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/devendrapatil" target="_blank">linkedin.com/in/devendrapatil</a></p>
   </div>
 </section>
 
@@ -234,13 +244,12 @@
     "blinkit-sales-analysis":[
       "images/projects/blinkit-sales.png"
     ],
-    "excel-ecommerce-sales-dashboard": [
-  "images/projects/excel-ecommerce.png"
-],
-    "advanced-excel-sales-dashboard": [
-  "images/projects/advanced-excel-sales.png"
-]
-
+    "excel-ecommerce-sales-dashboard":[
+      "images/projects/excel-ecommerce.png"
+    ],
+    "advanced-excel-sales-dashboard":[
+      "images/projects/advanced-excel-sales.png"
+    ]
   };
 
   const username="Devendra0602";
@@ -254,7 +263,7 @@
         let imagesHTML="";
         if(imgs){
           imagesHTML=`
-            <div class="carousel" style="position:relative">
+            <div class="carousel">
               <img src="${imgs[0]}" alt="${r.name}">
               ${imgs.length>1?`<span class="carousel-indicator">${imgs.length} images</span>`:""}
             </div>`;
